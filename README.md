@@ -100,9 +100,9 @@ transcribe-anything video.mp4 --device insane --batch-size 8 --flash True
 _python api_
 
 ```python
-from transcribe_anything import transcribe_anything
+from transcribe_anything import transcribe
 
-transcribe_anything(
+transcribe(
     url_or_file="https://www.youtube.com/watch?v=dQw4w9WgXcQ",
     output_dir="output_dir",
     task="transcribe",
@@ -581,7 +581,7 @@ Detected language: English
 ## Api
 
 ```python
-from transcribe_anything.api import transcribe
+from transcribe_anything import transcribe
 
 transcribe(
     url_or_file="https://www.youtube.com/watch?v=dQw4w9WgXcQ",
