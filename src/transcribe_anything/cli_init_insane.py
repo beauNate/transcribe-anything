@@ -6,7 +6,7 @@ import logging
 import os
 import sys
 
-from transcribe_anything.insanley_fast_whisper_reqs import get_environment
+from transcribe_anything.insanely_fast_whisper_reqs import get_environment
 
 # for resource loading
 
