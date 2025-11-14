@@ -1,5 +1,5 @@
 """
-Entry point for running the transcribe-anything prgram.
+Entry point for running the transcribe-anything program.
 """
 
 # flake8: noqa E501
@@ -79,12 +79,12 @@ def parse_arguments() -> argparse.Namespace:
     )
     parser.add_argument(
         "--output_dir",
-        help="Provide output directory name,d efaults to the filename of the file.",
+        help="Provide output directory name, defaults to the filename of the file.",
         default=None,
     )
     parser.add_argument(
         "--model",
-        help="name of the Whisper model to us",
+        help="name of the Whisper model to use",
         default="small",
         choices=WHISPER_MODEL_OPTIONS,
     )
@@ -266,18 +266,16 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    # push sys argv prior to call
-    here = Path(os.path.abspath(os.path.dirname(__file__)))
-    project_root = here.parent.parent
-    localfile_dir = project_root / "tests" / "localfile"
-    os.chdir(localfile_dir)
-    # sys.argv.append("test.wav")
+    # This module should be run via the installed command-line tools:
+    # transcribe-anything or transcribe_anything
+    # For testing during development, uncomment and modify the lines below:
+    # here = Path(os.path.abspath(os.path.dirname(__file__)))
+    # project_root = here.parent.parent
+    # localfile_dir = project_root / "tests" / "localfile"
+    # os.chdir(localfile_dir)
+    # sys.argv.append("video.mp4")
+    # sys.argv.append("--language")
+    # sys.argv.append("en")
     # sys.argv.append("--model")
-    # sys.argv.append("large")
-    # sys.argv.append('--initial_prompt "What is your name?"')
-    sys.argv.append("video.mp4")
-    sys.argv.append("--language")
-    sys.argv.append("en")
-    sys.argv.append("--model")
-    sys.argv.append("tiny")
+    # sys.argv.append("tiny")
     sys.exit(main())

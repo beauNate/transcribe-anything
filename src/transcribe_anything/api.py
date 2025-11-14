@@ -346,14 +346,9 @@ def transcribe(
 
 
 if __name__ == "__main__":
-    # test case for twitter video
+    # Example usage - modify these paths for your testing needs
     # transcribe(url_or_file="https://twitter.com/wlctv_ca/status/1598895698870951943")
-    try:
-        # transcribe(url_or_file="https://www.youtube.com/live/gBHFFM7-aCk?feature=share", output_dir="test")
-        transcribe(
-            url_or_file=r"E:\james_o_keefe_struggle_sessions.mp4",
-            output_dir=r"E:\test2",
-        )
-    except KeyboardInterrupt:
-        print("Keyboard interrupt")
-        sys.exit(1)
+    # transcribe(url_or_file="https://www.youtube.com/live/gBHFFM7-aCk?feature=share", output_dir="test")
+    # transcribe(url_or_file="path/to/your/video.mp4", output_dir="output")
+    print("Import this module to use the transcribe() function.")
+    print("Example: from transcribe_anything.api import transcribe")
